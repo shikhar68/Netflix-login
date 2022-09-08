@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Netflix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="netflix-login.css"
+    />
+    <script>
+      function validate() {
+        var username = document.getElementById("uname");
+        var password = document.getElementById("pass");
+
+        if (username.value.trim() == "" || password.value.trim() == "") {
+          alert("No blank value allowed");
+          return false;
+        } else if (isNaN(username.value) || username.value.length < 5) {
+          alert("Invalid phone Number, Enter at least 5 Numeric value");
+
+          return false;
+        } else if (password.value.length < 3) {
+          alert("Password must be at least 3 characters long.");
+          return false;
+        } else {
+          true;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="main">
+      <img class="logo" src="images/svg/svgexport-1.svg" />
+
+      <section class="parent">
+        <div class="child">
+          <div class="child-top">
+            <div class="child-signin">Sign In</div>
+            <form
+              onsubmit="return validate()"
+              action="http://www.javatpoint.com/javascriptpages/valid.jsp"
+              class="new-form"
+            >
+              <input
+                id="uname"
+                class="child-input"
+                type="text"
+                placeholder="Enter Phone number"
+                required
+              />
+              <input
+                id="pass"
+                class="child-input"
+                type="password"
+                placeholder="Password"
+                required
+              />
+
+              <button type="submit" class="child-btn">Sign In</button>
+            </form>
+            <div class="child-mid">
+              <form class="child-mid-1">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </form>
+              <div class="child-mid-1">Need help?</div>
+            </div>
+          </div>
+
+          <div class="child-bottom">
+            <div class="child-bottom-1">
+              New to Netflix?
+              <a style="color: white; text-decoration: none" href="#"
+                >Sign up now.</a
+              >
+            </div>
+            <div class="child-bottom-2">
+              This page is protected by Google reCAPTCHA to ensure you're not a
+              bot.
+              <a style="color: #0071eb; text-decoration: none" href="#"
+                >Learn more.</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="foot">
+        <div class="foot-child">
+          <div class="foot-1">
+            Questions? Call<a style="color: #737373" href="#">
+              000-800-040-1843</a
+            >
+          </div>
+
+          <div class="foot-2">
+            <p>FAQ</p>
+            <p>Help Centre</p>
+            <p>Terms of Use</p>
+            <p>Privacy</p>
+            <p>Cookie Preferences</p>
+            <p>Corporate Information</p>
+          </div>
+
+          <select class="foot-3">
+            <option>English</option>
+            <option>हिन्दी</option>
+          </select>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
